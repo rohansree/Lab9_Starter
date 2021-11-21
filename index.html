@@ -102,6 +102,53 @@
 
     // Start your code here
     // You may move this JS to another file if you wish
+    errorBtns[0].onclick = function(){console.log('logging to console')};
+    errorBtns[1].onclick = function(){console.error('logging error to console')};
+    errorBtns[2].onclick = function(){console.count()};
+    errorBtns[3].onclick = function(){console.warn('warning')};
+    const x = 7;
+    const y = 3;
+    const assertion = 'x is less than y';
+    errorBtns[4].onclick = function(){console.assert(x < y, {x, y, assertion})};
+    errorBtns[5].onclick = function(){console.clear()};
+    errorBtns[6].onclick = function(){console.dir(document.head)};
+    errorBtns[7].onclick = function(){console.dirxml(document.head)};
+    errorBtns[8].onclick = function(){
+      console.group('grouping')
+    };
+    errorBtns[9].onclick = function(){
+      console.groupEnd('grouping')
+    };
+    errorBtns[10].onclick = function(){
+      console.table([
+      {
+        first: 'Chick',
+        last: 'Fil-A',
+        type: 'chicken'
+      },
+      {
+        first: 'McDonalds',
+      },
+    ])};
+    errorBtns[11].onclick = function(){console.time('timer')};
+    errorBtns[12].onclick = function(){console.timeEnd('timer')};
+    errorBtns[13].onclick = function(){console.trace()};
+   
+   
+    errorBtns[14].onclick = function(){y = 6;};
+
+
+
+
+
+
+
+
+
+
+
+
+
   </script>
 </body>
 
