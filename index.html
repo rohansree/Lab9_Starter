@@ -140,16 +140,19 @@
 
     const tamper = 3;
 
-    try {
-
-      tamper = 5;
-    } catch (err) {
-
-    // error handling
-    console.log('tried to reassign a constant');
-
+    
+    class CustomError extends Error {
+      constructor(message) {
+        super(message); // (1)
+        this.name = "CustomError"; // (2)
+      }
     }
 
+    try {
+      tamper = 5;
+    } catch (err) {
+      throw new CustomError("ruh roh raggy");
+    }
 
 
 
