@@ -152,6 +152,10 @@
 
     const tamper = 3;
 
+    window.onerror = function () {
+      //alert('we have problem');
+      console.log('window.onerror caught error');
+    };
     
     class CustomError extends Error {
       constructor(message) {
@@ -165,8 +169,10 @@
     } catch (err) {
       throw new CustomError("ruh roh raggy");
     }
-
-
+    finally{
+      console.log('finally');
+    }
+    
     TrackJS.track('Testing TrackJS!');
 
 
