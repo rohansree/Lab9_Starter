@@ -138,8 +138,17 @@
     errorBtns[14].onclick = function(){y = 6;};
 
 
+    const tamper = 3;
 
+    try {
 
+      tamper = 5;
+    } catch (err) {
+
+    // error handling
+    console.log('tried to reassign a constant');
+
+    }
 
 
 
